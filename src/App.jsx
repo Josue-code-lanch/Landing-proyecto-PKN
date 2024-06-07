@@ -2,6 +2,12 @@ import Logo from "/fondo4.jpeg";
 import "./App.css";
 
 function App() {
+  document.addEventListener("mousemove", function (event) {
+    const fondo = document.querySelector("body");
+    const x = (event.clientX / window.innerWidth) * 20 - 20;
+    const y = (event.clientY / window.innerHeight) * 20 - 20;
+    fondo.style.backgroundPosition = x + "% " + y + "%";
+  });
   return (
     <>
       <div className="contain">
@@ -91,12 +97,12 @@ function Youtube() {
         viewBox="0 -3 20 20"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <title>youtube [#168]</title>
         <desc>Created with Sketch.</desc>
         <defs></defs>
-        <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="Page-1" stroke="none" strokeWidth="1" fillRule="evenodd">
           <g
             id="Dribbble-Light-Preview"
             transform="translate(-300.000000, -7442.000000)"
@@ -124,10 +130,17 @@ function YoutubeMusic() {
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <circle class="a" cx="24" cy="24" r="14" strokeWidth="2" fill="none" />
-        <path class="a" d="M31,24,19,31V17Z" strokeWidth="2" fill="none" />
         <circle
-          class="a"
+          className="a"
+          cx="24"
+          cy="24"
+          r="14"
+          strokeWidth="2"
+          fill="none"
+        />
+        <path className="a" d="M31,24,19,31V17Z" strokeWidth="2" fill="none" />
+        <circle
+          className="a"
           cx="24"
           cy="24"
           r="21.5"
@@ -148,9 +161,9 @@ function Spotify() {
         viewBox="0 0 20 20"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
       >
-        <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="Page-1" stroke="none" strokeWidth="1" fillRule="evenodd">
           <g
             id="Dribbble-Light-Preview"
             transform="translate(-140.000000, -7479.000000)"

@@ -77,9 +77,28 @@ svg:hover {
 }
 
 @media (max-width: 480px) {
+  body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: starry-night 8s linear infinite;
+  }
   .redes svg {
     border-radius: 12px;
     box-shadow: 0 0 20px #8a2be2;
     gap: 5px;
+  }
+}
+
+@keyframes starry-night {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
   }
 }
